@@ -529,7 +529,8 @@ a.hoverline:hover {
 }
 
 .page-title-travelled {
-  text-align: center;  /* Centers the text horizontally */
+  text-align: left;
+  padding-left: 15px; 
 }
 
 #experience .col.s12.m2 {
