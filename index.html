@@ -474,10 +474,10 @@ of each drug container to estimate the degradation of the drug.
 
     <!-- Fourth Section: Projects -->
     <section id="projects" class="section scrollspy">
-      <h3 class="page-title white-text teal">Projects</h3>
+      <h3 class="page-title white-text teal">Recent Projects</h3>
+      <div id = "recent-projects-dynamic">
       <div class="container">
         <div class="row">
-
           <div class="col s12 m6 l4">
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
@@ -779,7 +779,30 @@ of each drug container to estimate the degradation of the drug.
           <!-- ************* -->
         </div>
       </div>
+      </div>
     </section>
+
+    <!-- Script for Dynamic Recent Projects -->
+    <script>
+      const projects = document.querySelectorAll("col s12 m6 l4"); 
+
+      // Loop through the different projects and display only the recent projects (E.g. 3)
+      projects.forEach((card, index) => 
+      {
+        console.log('Card ${index + 1}:', card); 
+
+        if (index < 3)
+        {
+          card.classList.add('highlight'); 
+        }
+
+        if (index >= 3)
+        {
+          card.style.display = 'none'; 
+        }
+      });
+
+    </script>
 
     <!-- Fifth Section: Skills -->
     <section id="skills" class="section scrollspy">
@@ -1022,7 +1045,7 @@ of each drug container to estimate the degradation of the drug.
   </main>
 
   <!-- Ninth Section: Places Travelled -->
-  <section id="placesTravelled" class="section scrollspy">
+  <section id="placesTravelled" class="section scrollspy full-height">
     <h3 class="page-title-travelled white-text teal">Places Travelled</h3>
     <div class="container">
       <div class="iframe-container">
