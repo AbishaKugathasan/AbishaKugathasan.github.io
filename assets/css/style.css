@@ -528,6 +528,10 @@ a.hoverline:hover {
   position: relative;
 }
 
+.page-title-travelled {
+  text-align: center;  /* Centers the text horizontally */
+}
+
 #experience .col.s12.m2 {
   text-align: center;
 }
