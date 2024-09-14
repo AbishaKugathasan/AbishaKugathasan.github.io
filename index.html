@@ -544,16 +544,29 @@ of each drug container to estimate the degradation of the drug.
                 <img alt="${project.title}" src="${project.image}" style="height: 100%; width: 100%" />
               </div>
               <div class="card-content">
-                <span class="card-title teal-text hoverline">${project.title}</span>
-                <p>${project.description}</p>
-                <p><b>Tools:</b> ${project.tools}</p>
+                <span class="card-title teal-text hoverline">${project.title}<i
+                    class="mdi-navigation-more-vert right"></i></span>
+                <p>
+                  ${project.description}
+                </p>
               </div>
+              <div class="card-reveal">
+                <!-- TODO: change this -- only close button -->
+                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                <span class="card-title grey-text"><small>Accomplishments</small><i
+                    class="mdi-navigation-close right"></i></span>
+                <ul>
+                  <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, Heroku</li>
+                  <li>Register/login to the web app(with OAuth-based Google Sign-In).</li>
+                  <li>Play Quiz and see the leaderboard</li>
+                </ul>
               <div class="card-action">
                 <a href="${project.liveLink}" target="_blank" class="btn blue-grey">View Online</a>
                 <a href="${project.githubLink}" target="_blank" class="btn blue-grey">View GitHub</a>
               </div>
             </div>
           </div>
+        </div>
           `;
 
           recentProjects.innerHTML += projectHTML; 
