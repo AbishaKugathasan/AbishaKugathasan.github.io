@@ -562,6 +562,14 @@ small {
   background-color: #104376 !important;
 }
 
+.iframe-container 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensures full height alignment, you can adjust as needed */
+}
+
 /* .teal {
   background-color: #00695c !important;
 } */
@@ -693,9 +701,3 @@ small {
   }
 }
 
-.iframe-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* Ensures full height alignment, you can adjust as needed */
-}
