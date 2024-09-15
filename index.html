@@ -480,11 +480,12 @@ of each drug container to estimate the degradation of the drug.
             <div id = "recent-projects-dynamic">
             <!-- Dynamically Created Content using Script Will Go Here -->
             </div>  
-          </div>
+          
           <button id="load-more-button" onclick="displayMoreProjects()">Load More!</button>
           <div id = "load-more-projects">
             <!-- Loading more projects script will go here -->
           </div> 
+        </div> 
         </div>
     </section>
 
@@ -580,7 +581,11 @@ of each drug container to estimate the degradation of the drug.
       function displayMoreProjects()
       {
         projectNumber += 1; 
-        const moreProjects = document.getElementById('load-more-projects'); 
+
+        // If there are more projects that could be loaded 
+        if (projectNumber < projects.length)
+        {
+          const moreProjects = document.getElementById('load-more-projects'); 
           const projectHTML = `
             <div class="col s12 m6 l4">
             <div class="card medium">
@@ -612,6 +617,13 @@ of each drug container to estimate the degradation of the drug.
            `;
 
           moreProjects.innerHTML += projectHTML; 
+        }
+
+        else
+        {
+          document.getElementById('load-more-button').disabled = true; 
+        }
+        
       }
       displayLatestThree(); 
     </script>
