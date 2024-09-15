@@ -481,7 +481,7 @@ of each drug container to estimate the degradation of the drug.
             <!-- Dynamically Created Content using Script Will Go Here -->
             </div>  
           </div>
-          <button onclick="displayMoreProjects()">Load More!</button>
+          <button id="load-more-button" onclick="displayMoreProjects()">Load More!</button>
           <div id = "load-more-projects">
             <!-- Loading more projects script will go here -->
           </div> 
@@ -537,6 +537,8 @@ of each drug container to estimate the degradation of the drug.
         }
       ]; 
 
+      let projectNumber = 2;
+
       function displayLatestThree()
       {
         const recentProjects = document.getElementById('recent-projects-dynamic'); 
@@ -573,9 +575,7 @@ of each drug container to estimate the degradation of the drug.
 
           recentProjects.innerHTML += projectHTML; 
         })
-      }
-
-      var projectNumber = 3; 
+      } 
 
       function displayMoreProjects()
       {
