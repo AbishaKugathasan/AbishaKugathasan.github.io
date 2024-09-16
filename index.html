@@ -18,9 +18,11 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
   <!-- Font Awesome Icon - CSS-->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel='stylesheet' href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css">
+
   <!-- Custom Styles-->
   <link rel="stylesheet" href="/assets/css/style.css" />
-  <title>Varad Bhogayata | Software Developer</title>
+  <title>Abisha Kugathasan | Software Engineer</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
@@ -126,14 +128,6 @@
       </li>
 
       <li class="bold">
-        <!--
-        ICONS:
-        -->
-        <a aria-label="Navigate to the Education section" href="#placesTravelled" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Places Travelled</span></a>
-      </li>
-
-      <li class="bold">
         <!-- 
         1. mdi-communication-contacts
         2. mdi-content-mail
@@ -141,6 +135,14 @@
         -->
         <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
             class="mdi-content-mail small"></i><span>Contact</span></a>
+      </li>
+
+      <li class="bold">
+        <!--
+        ICONS:
+        -->
+        <a aria-label="Navigate to the Places Travelled section" href="#placesTravelled" class="waves-effect waves-dark teal-text"><i
+            class="mdi mdi-map small"></i><span>Places Travelled</span></a>
       </li>
 
       <li class="bold">
@@ -166,8 +168,7 @@
     <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
       class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Varad
-        Bhogayata</a><span class="black-text">Software Developer</span>
+      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Abisha Kugathasan</a><span class="black-text">Software Engineer</span>
     </div>
   </nav>
 
@@ -202,7 +203,7 @@
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Places Travelled section" href="#placesTravelled" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Places Travelled</span></a>
+            class="mdi-social-school small"></i><span>Places Travelled</span></a>
       </li>
       <li class="bold">
         <a aria-label="Open Varad's Resume in a new tab"
@@ -224,7 +225,7 @@
               <h2>Hi, I'm <span class="teal">Abisha Kugathasan.</span></h2>
               <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#1E90FF"></span></h5>
               <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
-              <h5>Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving a complex and challenging real-world problems.</h5>
+              <h5>Creative Problem-Solver whose always excited to tackle real-world challenges and turn complex problems into innovative solutions.  &#128187</h5>
             </div>
             <div class="social">
               <a href="http://linkedin.com/in/abisha_kugathasan" target="_blank">
@@ -272,19 +273,19 @@
           </h2>
         </blockquote> -->        
         <p>
-          I am a Computer Science Grad Student at Arizona State University. I enjoy problem-solving and coding. Always strive to bring 100% to the work I do.
+          I am a Computer Engineering Student at the Univesity of Toronto where I specialize in Software and Networks. 
 
-          I have worked on technologies like Python, Django, Flask, MySQL, PostgreSQL, MongoDB, HTML5, CSS, Java, C++ during my bachelor's. I have 19 months of professional work experience which helped me strengthen my experience in Python, Flask, and Django.
+          I have worked on technologies like C, C++, C#, Python, Flask, MySQL, PostgreSQL, MongoDB, HTML5, CSS. I have 16 months of professional work experience. 
 
           I am passionate about developing complex applications that solve real-world problems impacting millions of users.
         </p>
         <p>
           <ul>
-            <li><b>Languages:</b> Python, Java, JavaScript, C, C++, HTML/CSS, Bash</li>
+            <li><b>Languages:</b> C, C++, C#, Python, HTML/CSS, Bash</li>
             <li><b>Databases:</b> MySQL, PostgreSQL, MongoDB</li>
             <li><b>Libraries:</b> NumPy, Pandas, OpenCV</li>
-            <li><b>Frameworks:</b> Flask, Django, Node.js, Keras, TensorFlow, PyTorch, Bootstrap, Apache Beam</li>
-            <li><b>Tools & Technologies:</b> Git, Docker, AWS, GCP, Heroku, JIRA</li>
+            <li><b>Frameworks:</b> Flask, Django, Node.js, Keras, TensorFlow, PyTorch</li>
+            <li><b>Tools & Technologies:</b> Git, Docker, Heroku, JIRA</li>
           </ul>
           
         </p>
@@ -476,12 +477,12 @@ of each drug container to estimate the degradation of the drug.
     <section id="projects" class="section scrollspy">
         <h3 class="page-title white-text teal">Recent Projects</h3> 
         <div class="container">
+          <button id="load-more-button" onclick="displayMoreProjects()">Load More!</button>
+
           <div class="row">
             <div id = "recent-projects-dynamic">
             <!-- Dynamically Created Content using Script Will Go Here -->
             </div>  
-          
-          <button id="load-more-button" onclick="displayMoreProjects()">Load More!</button>
           <div id = "load-more-projects">
             <!-- Loading more projects script will go here -->
           </div> 
@@ -493,46 +494,46 @@ of each drug container to estimate the degradation of the drug.
     <script>
       const projects = [
         {
-          title: "Music Player Web-App",
-          description: "A music streaming web app based on Django.",
-          tools: "Django, HTML, CSS, Bootstrap, SQLite, AWS S3, Heroku",
-          image: "/assets/img/project-music-player.png",
-          githubLink: "https://github.com/varadbhogayata/music-player",
+          title: "Operating Systems",
+          description: "Series of programs that mock the kernel.",
+          tools: "C, Python, Meson",
+          image: "/assets/img/project-OS.jpg",
+          githubLink: "https://github.com/AbishaKugathasan/OperatingSystems",
           liveLink: "https://galvanic-music.herokuapp.com/"
         }, 
 
         {
-          title: "Map Application",
-          description: "A music streaming web app based on Django.",
-          tools: "Django, HTML, CSS, Bootstrap, SQLite, AWS S3, Heroku",
-          image: "/assets/img/project-music-player.png",
-          githubLink: "https://github.com/varadbhogayata/music-player",
+          title: "Bean Counters",
+          description: "A game that mocks one of my favourite childhood games.",
+          tools: "C++, DE1-Soc Board",
+          image: "/assets/img/project-beans.jpg",
+          githubLink: "https://github.com/AbishaKugathasan/Beans-Counter-Game",
           liveLink: "https://galvanic-music.herokuapp.com/"
         },
 
         {
-          title: "Mario Pizzeria",
-          description: "A music streaming web app based on Django.",
-          tools: "Django, HTML, CSS, Bootstrap, SQLite, AWS S3, Heroku",
-          image: "/assets/img/project-music-player.png",
-          githubLink: "https://github.com/varadbhogayata/music-player",
+          title: "Personal Site",
+          description: "A web app for my personal website.",
+          tools: "HTML, CSS, Python, SQLite, Flask",
+          image: "/assets/img/project-webapp.jpeg",
+          githubLink: "https://github.com/AbishaKugathasan/MLHFellowshipProject",
           liveLink: "https://galvanic-music.herokuapp.com/"
         },
         
         {
           title: "AI for Analyzing Electrograms",
-          description: "A music streaming web app based on Django.",
-          tools: "Django, HTML, CSS, Bootstrap, SQLite, AWS S3, Heroku",
+          description: "Using AI to classify electrograms into 6 categories",
+          tools: "Python, PyTorch",
           image: "/assets/img/project-music-player.png",
-          githubLink: "https://github.com/varadbhogayata/music-player",
+          githubLink: "https://github.com/AbishaKugathasan/APS360",
           liveLink: "https://galvanic-music.herokuapp.com/"
         }, 
 
         {
-          title: "Bean Stackers Game",
-          description: "A music streaming web app based on Django.",
-          tools: "Django, HTML, CSS, Bootstrap, SQLite, AWS S3, Heroku",
-          image: "/assets/img/project-music-player.png",
+          title: "Wordle Solver",
+          description: "A web application that solves woordle problems",
+          tools: "Python, Flask, HTML, CSS, Heroku",
+          image: "/assets/img/project-wordle.png",
           githubLink: "https://github.com/varadbhogayata/music-player",
           liveLink: "https://galvanic-music.herokuapp.com/"
         }
@@ -616,6 +617,7 @@ of each drug container to estimate the degradation of the drug.
         </div>
            `;
 
+          // Add to existing html that is needed to generate the HTML text 
           moreProjects.innerHTML += projectHTML; 
         }
 
@@ -938,17 +940,16 @@ of each drug container to estimate the degradation of the drug.
         </p>
       </div>
     </section>
-  </main>
 
-  <!-- Ninth Section: Places Travelled -->
+      <!-- Ninth Section: Places Travelled -->
   <section id="placesTravelled" class="section scrollspy full-height">
-    <h3 class="page-title-travelled white-text teal">Places Travelled</h3>
+    <h3 class="page-title white-text teal">Places Travelled</h3>
     <div class="container">
-      <div class="iframe-container">
         <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Qlk6sO9EylGLPshZ-O7yJ-E-oxw3KGM&ehbc=2E312F" width="640" height="480"></iframe>
-      </div>
     </div>
   </section>
+
+  </main>
 
   <!-- typed.js -->
   <script src="assets/vendor/typed.js/typed.min.js"></script>
