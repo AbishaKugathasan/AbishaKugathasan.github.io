@@ -12,7 +12,9 @@
 ![image](https://github.com/user-attachments/assets/31959f9c-1cec-4a5b-b55b-2087a9c8f84a) <br/>
 ![image](https://github.com/user-attachments/assets/432da599-07cd-4ff0-a8a1-fa5f1eb08124) <br/>
 ## Acitivity 5 - Adding Dynamic Content with JavaScript
-![image](https://github.com/user-attachments/assets/ade2867d-6f94-40f3-853b-a83a41bc1902)
+![image](https://github.com/user-attachments/assets/ade2867d-6f94-40f3-853b-a83a41bc1902) <br/>
+![image](https://github.com/user-attachments/assets/b9f02daf-b8c4-4073-b032-57362b64e7ae) <br/>
+
 
 
 
