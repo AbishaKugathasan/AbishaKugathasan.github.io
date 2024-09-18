@@ -206,7 +206,7 @@
             class="mdi-social-school small"></i><span>Places Travelled</span></a>
       </li>
       <li class="bold">
-        <a aria-label="Open Varad's Resume in a new tab"
+        <a aria-label="Open Abisha's Resume in a new tab"
           href="https://drive.google.com/file/d/1jmJ9wtGAwwQ8IAuRSzyRERYwKzn4VSd8/view?usp=sharing" target="_blank"
           class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
       </li>
@@ -382,7 +382,8 @@
           tools: "C, Python, Meson",
           image: "/assets/img/project-OS.jpg",
           githubLink: "https://github.com/AbishaKugathasan/OperatingSystems",
-          liveLink: "https://galvanic-music.herokuapp.com/"
+          liveLink: "https://galvanic-music.herokuapp.com/", 
+          date: '2024-12-25'
         }, 
 
         {
@@ -391,7 +392,8 @@
           tools: "C++, DE1-Soc Board",
           image: "/assets/img/project-beans.jpg",
           githubLink: "https://github.com/AbishaKugathasan/Beans-Counter-Game",
-          liveLink: "https://galvanic-music.herokuapp.com/"
+          liveLink: "https://galvanic-music.herokuapp.com/", 
+          date: '2022-03-25'
         },
 
         {
@@ -400,7 +402,8 @@
           tools: "HTML, CSS, Python, SQLite, Flask",
           image: "/assets/img/project-webapp.jpeg",
           githubLink: "https://github.com/AbishaKugathasan/MLHFellowshipProject",
-          liveLink: "https://galvanic-music.herokuapp.com/"
+          liveLink: "https://galvanic-music.herokuapp.com/", 
+          date: '2023-02-10'
         },
         
         {
@@ -409,7 +412,8 @@
           tools: "Python, PyTorch",
           image: "/assets/img/project-music-player.png",
           githubLink: "https://github.com/AbishaKugathasan/APS360",
-          liveLink: "https://galvanic-music.herokuapp.com/"
+          liveLink: "https://galvanic-music.herokuapp.com/", 
+          date: '2024-05-28'
         }, 
 
         {
@@ -418,7 +422,8 @@
           tools: "Python, Flask, HTML, CSS, Heroku",
           image: "/assets/img/project-wordle.png",
           githubLink: "https://github.com/varadbhogayata/music-player",
-          liveLink: "https://galvanic-music.herokuapp.com/"
+          liveLink: "https://galvanic-music.herokuapp.com/", 
+          date: '2022-03-12'
         }
       ]; 
 
@@ -426,37 +431,40 @@
 
       function displayLatestThree()
       {
+        // Sort the projects first and put that into a new array 
+        projects.sort((a, b) => a.date.localeCompare(b.date));
+
         const recentProjects = document.getElementById('recent-projects-dynamic'); 
         projects.slice(0, 3).forEach((project) => {
           const projectHTML = `
-            <div class="col s12 m6 l4">
+          <div class="col s12 m6 l4">
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
                 <img alt="${project.title}" src="${project.image}" style="height: 100%; width: 100%" />
               </div>
               <div class="card-content">
-                <span class="card-title teal-text hoverline">${project.title}<i
+                <span class="card-title activator teal-text hoverline">${project.title}<i
                     class="mdi-navigation-more-vert right"></i></span>
                 <p>
                   ${project.description}
                 </p>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
+                <span class="card-title grey-text text-darken-4"><small>Accomplishments</small><i
                     class="mdi-navigation-close right"></i></span>
                 <ul>
-                  <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, Heroku</li>
+                  <li><b>Tools:</b> ${project.tools}</li>
                   <li>Register/login to the web app(with OAuth-based Google Sign-In).</li>
                   <li>Play Quiz and see the leaderboard</li>
                 </ul>
-              <div class="card-action">
-                <a href="${project.liveLink}" target="_blank" class="btn blue-grey">View Online</a>
-                <a href="${project.githubLink}" target="_blank" class="btn blue-grey">View GitHub</a>
+                <div class="card-action">
+                  <a href="${project.liveLink}" target="_blank" class="btn blue-grey">View Online</a>
+                  <a href="${project.githubLink}" target="_blank" class="btn blue-grey">View GitHub</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-          `;
+        `;
 
           recentProjects.innerHTML += projectHTML; 
         })
@@ -470,36 +478,37 @@
         if (projectNumber < projects.length)
         {
           const moreProjects = document.getElementById('load-more-projects'); 
+
           const projectHTML = `
-            <div class="col s12 m6 l4">
+          <div class="col s12 m6 l4">
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
                 <img alt="${projects[projectNumber].title}" src="${projects[projectNumber].image}" style="height: 100%; width: 100%" />
               </div>
               <div class="card-content">
-                <span class="card-title teal-text hoverline">${projects[projectNumber].title}<i
+                <span class="card-title activator teal-text hoverline">${projects[projectNumber].title}<i
                     class="mdi-navigation-more-vert right"></i></span>
                 <p>
                   ${projects[projectNumber].description}
                 </p>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
+                <span class="card-title grey-text text-darken-4"><small>Accomplishments</small><i
                     class="mdi-navigation-close right"></i></span>
                 <ul>
-                  <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, Heroku</li>
+                  <li><b>Tools:</b> ${projects[projectNumber].tools}</li>
                   <li>Register/login to the web app(with OAuth-based Google Sign-In).</li>
                   <li>Play Quiz and see the leaderboard</li>
                 </ul>
-              <div class="card-action">
-                <a href="${projects[projectNumber].liveLink}" target="_blank" class="btn blue-grey">View Online</a>
-                <a href="${projects[projectNumber].githubLink}" target="_blank" class="btn blue-grey">View GitHub</a>
+                <div class="card-action">
+                  <a href="${projects[projectNumber].liveLink}" target="_blank" class="btn blue-grey">View Online</a>
+                  <a href="${projects[projectNumber].githubLink}" target="_blank" class="btn blue-grey">View GitHub</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-           `;
-
+        `;
+        
           // Add to existing html that is needed to generate the HTML text 
           moreProjects.innerHTML += projectHTML; 
         }
@@ -805,7 +814,7 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script type="text/javascript">
     var typed = new Typed('.typing',{
-      strings: ["Pythonist", "Developer", "Fast Learner"],
+      strings: ["Software Engineer", "Pickle-Ball Lover", "Swimmer"],
       loop: true,
       typeSpeed: 80,
       backSpeed: 40
